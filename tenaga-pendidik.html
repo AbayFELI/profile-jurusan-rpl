@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Tenaga Pendidik - Profil RPL SMKN 2 BANDAR LAMPUNG</title>
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Separated Custom Stylesheet & Responsive System -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body data-page="tenaga-pendidik" class="bg-[#f8f9ff] text-[#121c2a] font-['Hanken_Grotesk']">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-top-bar">
+      <div class="header-top-container">
+        <a href="index.html" class="brand-link" title="Beranda SMKN 2 BANDAR LAMPUNG">
+          <img alt="Logo SMKN 2 BANDAR LAMPUNG" class="brand-logo" src="assets/images/logosmk.png"/>
+          <div class="brand-text-group">
+            <span class="brand-title">SMKN 2 BANDAR LAMPUNG</span>
+            <span class="brand-subtitle">Jurusan Rekayasa Perangkat Lunak</span>
+          </div>
+        </a>
+        <div class="header-social-links">
+          <a aria-label="Instagram" class="social-icon-btn" href="#" title="Instagram"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
+          <a aria-label="Website Resmi SMKN 2" class="social-icon-btn" href="https://smkn2bdl.sch.id/" target="_blank" rel="noopener noreferrer" title="Website SMKN 2"><span class="material-symbols-outlined text-[20px]">public</span></a>
+          <a aria-label="TikTok" class="social-icon-btn" href="#" title="TikTok"><span class="material-symbols-outlined text-[20px]">music_note</span></a>
+          <a aria-label="YouTube" class="social-icon-btn" href="#" title="YouTube"><span class="material-symbols-outlined text-[20px]">smart_display</span></a>
+        </div>
+        <button aria-label="Buka Menu Navigasi" aria-expanded="false" class="mobile-toggle-btn" id="mobile-nav-toggle">
+          <span class="material-symbols-outlined text-[28px]">menu</span>
+        </button>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="header-nav-container">
+        <nav class="desktop-nav" aria-label="Navigasi Utama">
+          <a class="nav-link" data-path="beranda" href="index.html">Beranda</a>
+          <a class="nav-link" data-path="keunggulan" href="index.html#mengapa-rpl">Keunggulan</a>
+          <a class="nav-link" data-path="tenaga-pendidik" href="tenaga-pendidik.html">Tenaga Pendidik</a>
+          <a class="nav-link" data-path="fasilitas-kurikulum" href="fasilitas-kurikulum.html">Fasilitas &amp; Kurikulum</a>
+          <a class="nav-link" data-path="karya-siswa" href="karya-siswa.html">Karya Siswa</a>
+          <a class="nav-link" data-path="kontak" href="kontak.html">Kontak</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-1.5 text-white/80 text-xs font-semibold">
+          <span class="material-symbols-outlined text-[16px] text-[#F5B400]">verified</span>
+          <span>Terakreditasi A • SMK PK</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-label="Menu Navigasi Mobile">
+    <div class="drawer-header">
+      <span class="drawer-title">Menu Navigasi</span>
+      <button aria-label="Tutup Menu" class="drawer-close-btn" id="drawer-close-btn">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a class="drawer-link" data-path="beranda" href="index.html">
+        <span class="material-symbols-outlined text-[20px]">home</span>
+        <span>Beranda</span>
+      </a>
+      <a class="drawer-link" data-path="keunggulan" href="index.html#mengapa-rpl">
+        <span class="material-symbols-outlined text-[20px]">star</span>
+        <span>Keunggulan RPL</span>
+      </a>
+      <a class="drawer-link" data-path="tenaga-pendidik" href="tenaga-pendidik.html">
+        <span class="material-symbols-outlined text-[20px]">badge</span>
+        <span>Tenaga Pendidik</span>
+      </a>
+      <a class="drawer-link" data-path="fasilitas-kurikulum" href="fasilitas-kurikulum.html">
+        <span class="material-symbols-outlined text-[20px]">school</span>
+        <span>Fasilitas &amp; Kurikulum</span>
+      </a>
+      <a class="drawer-link" data-path="karya-siswa" href="karya-siswa.html">
+        <span class="material-symbols-outlined text-[20px]">terminal</span>
+        <span>Karya Siswa</span>
+      </a>
+      <a class="drawer-link" data-path="kontak" href="kontak.html">
+        <span class="material-symbols-outlined text-[20px]">call</span>
+        <span>Kontak &amp; Lokasi</span>
+      </a>
+    </nav>
+    <div class="drawer-footer">
+      <p class="text-xs font-semibold text-white/70 uppercase tracking-wider mb-2.5">Konsultasi Jurusan</p>
+      <a href="https://wa.me/6289507972498" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-sm rounded transition-colors shadow">
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        <span>WhatsApp Resmi</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="flex flex-col w-full">
+
+      <!-- Hero Banner -->
+      <section class="w-full bg-[#0B3A66] text-white py-10 sm:py-14 relative overflow-hidden">
+        <div class="max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex flex-col justify-center max-w-2xl z-10">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="inline-block w-2.5 h-2.5 bg-[#F5B400] rounded-sm"></span>
+              <span class="text-xs font-bold text-[#F5B400] uppercase tracking-wider">Fakultas &amp; Tenaga Ahli Kejuruan</span>
+            </div>
+            <h1 class="font-['Space_Grotesk'] text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-tight">Tenaga Pendidik</h1>
+            <div class="w-16 h-[3px] bg-[#F5B400] mt-2 mb-3"></div>
+            <p class="text-sm sm:text-base text-white/85 leading-relaxed max-w-xl">
+              Guru produktif berkompeten, bersertifikasi industri nasional/internasional, dan berdedikasi membimbing generasi programmer masa depan.
+            </p>
+          </div>
+          <!-- Lab Photo Panel -->
+          <div class="hidden md:flex h-[180px] w-[360px] lg:w-[400px] shrink-0 relative overflow-hidden items-center justify-end">
+            <div class="w-full h-full relative border border-white/10 rounded overflow-hidden shadow">
+              <img class="w-full h-full object-cover" data-alt="Guru RPL membimbing siswa di lab komputer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_86Cz5-plSS8-fWePh7o6r4v11zDGXyCPc_PXELquN6-Yh12ja3OQlJMkeES0jUBwYMrbIu2Zfu0-NzY3e--Eu126jMJfT47lj5OuSYBCFgCNtZr0qsbSsScxJzK0fVib7J3Hg-UyA7zGJ4B8nNWEvmF9hX_cvMsadhUYLxxhhCqbDqx1VqPgH4cWhqVVJ3fl_Ym1zmqUP5GP22h304GkZQEIQ1QE81yRknz0ptg"/>
+              <div class="absolute inset-0 bg-[#0B3A66]/40 flex items-end p-3">
+                <span class="text-xs text-white font-semibold flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px] text-[#F5B400]">school</span>
+                  Bimbingan Proyek Nyata
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Metrics Bar -->
+      <section class="w-full bg-white border-b border-[#E5E7EB] py-5 sm:py-6">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 items-center">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 bg-[#EFF4FF] flex items-center justify-center rounded text-[#0B3A66] shrink-0">
+                <span class="material-symbols-outlined text-[22px] sm:text-[24px]">school</span>
+              </div>
+              <div>
+                <div class="font-['Space_Grotesk'] text-sm sm:text-base text-[#0B3A66] font-bold">100% S1/S2</div>
+                <div class="text-xs text-[#4b5563]">Kualifikasi Akademik</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 bg-[#EFF4FF] flex items-center justify-center rounded text-[#0B3A66] shrink-0">
+                <span class="material-symbols-outlined text-[22px] sm:text-[24px]">badge</span>
+              </div>
+              <div>
+                <div class="font-['Space_Grotesk'] text-sm sm:text-base text-[#0B3A66] font-bold">8 Pendidik</div>
+                <div class="text-xs text-[#4b5563]">Mentor &amp; Praktisi RPL</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 bg-[#EFF4FF] flex items-center justify-center rounded text-[#0B3A66] shrink-0">
+                <span class="material-symbols-outlined text-[22px] sm:text-[24px]">workspace_premium</span>
+              </div>
+              <div>
+                <div class="font-['Space_Grotesk'] text-sm sm:text-base text-[#0B3A66] font-bold">BNSP &amp; LSP</div>
+                <div class="text-xs text-[#4b5563]">Sertifikasi Asesor Resmi</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 bg-[#EFF4FF] flex items-center justify-center rounded text-[#0B3A66] shrink-0">
+                <span class="material-symbols-outlined text-[22px] sm:text-[24px]">history_edu</span>
+              </div>
+              <div>
+                <div class="font-['Space_Grotesk'] text-sm sm:text-base text-[#0B3A66] font-bold">&gt;12 Tahun</div>
+                <div class="text-xs text-[#4b5563]">Rata-rata Pengalaman</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teacher Cards Grid Section -->
+      <section class="w-full bg-[#f8f9ff] py-14 sm:py-20">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 border-b border-[#E5E7EB]">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-[#0B3A66]">Direktori Pengajar</span>
+              <h2 class="font-['Space_Grotesk'] text-xl sm:text-2xl md:text-3xl font-bold text-[#0B3A66] mt-1">
+                Tenaga Pengajar &amp; Mentor Kejuruan RPL
+              </h2>
+            </div>
+            <p class="text-xs sm:text-sm text-[#4b5563] mt-2 md:mt-0 max-w-md text-left md:text-right">
+              Memadukan kurikulum kejuruan Kemendikbudristek dengan standar teknologi industri modern berbasis proyek nyata.
+            </p>
+          </div>
+
+          <!-- 8 Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Card 1 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dra. Ratna Wulandari, M.Pd." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_jkNkDvWZWMZzNNdP9MCNsyrIrmR7_fpes-dwGzRiSKm82YVK1afNlRPu7tIMoTZqek_3JIo_zUW-vr5N2YDofN6AKEdezRbJHFukyCNlgChZ7Y7CeE3ka_-8bvPtHD45-h7JqUMVb3ABoHBsHNxM-un2oTJ3-GsH8iWYC9NhGP9UPXFsQk0SYNHEh-HvfGLU7uaj-Cxp-7S0n5SXLKgJNpEGBFAnrNtM_cRrFX4"/>
+                <div class="absolute top-3 left-3 bg-[#0B3A66] text-white text-[11px] px-2 py-0.5 rounded uppercase font-bold tracking-wider">
+                  KAPROG
+                </div>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Dra. Ratna Wulandari, M.Pd.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">Kepala Program Keahlian</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Basis Data</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">SQL &amp; DBMS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Budi Santoso, S.Kom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN5MYQ8BKTQetGLwXZdZUBccvCXR3dqRnURD-V61F4gS3l734_C-Xcs8P4T7lE54gz0q-Vu8X2uqb-0qM-5bvuJKnXmIzdDHy1D8HLy7ILO7P7KjQOWcuEdqgabmYYgoqjkne_6TYi6p8VHbk2zjrDIPfyWKXPtXGZEw0TN1N9xfwwMejUzT2T5qk1-i1Sx3HnYSNZ8fGKPpKueNWIaHXoehDcMgiwVeYro-a_Q-s"/>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Budi Santoso, S.Kom.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">Pemrograman Web &amp; Backend</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Web Dev</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">PHP &amp; Laravel</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dewi Anggraini, S.T." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwqM9XQQDSyqi3iOWecNIq8xr--G59IO2peI1UonXdgqQ5Yrhx_UnKUz8p6vEXHdJlObeSHmD2OBli498VkcZSOpCBsIcm02K64Q6naxTaijSknbm_1QOhaKWCRnc72_11p_Q2VzrrAdvA8pwIlAGm-GCQXA3KxHKcf-xZuloOaq0aytnLUcIEJwf8g8CJEnEWgDVLMBnSRBQVzW050hqZ6UtZQa1CHdVXJO_idvQ"/>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Dewi Anggraini, S.T.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">Pemrograman Dasar &amp; Logika</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Algoritma</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">Dasar PPLG</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Rizky Maulana, S.Kom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClosMPHUAwLYlKnXlzZnbS-SuluLZc-JT3vHEwe8sJ62h4MouJXJ4thwMxfP-CVYoY0F6gRaSY4-OaEtjE6byhpbHJn6kyaFOj9OA8RZRN0uK89EpqSGlxO-3RdExMVnYg1ygpdyOWcTmp_7F7VdOkqDlcChkaMkmcmlPe0kKB3MGjeok6H9B8gUTuudjOhhvLERZC0A_4QyQz3JHg0Gi0rHxkqDZtA5bKShpk7D0"/>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Rizky Maulana, S.Kom.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">Mobile App Development</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Flutter</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">React Native</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Siti Nurhaliza, M.Kom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDncFf_31ycC9EMR2HvSiVAXWQT16XNTjwELhWb62WwemYCDxZJ5zz5XFZqxYRY567dMYYEqQnwVdSm6CAz-ql10YBwUKZodnOAs6zK2c_wZ7GgB7seX1TV9MZIBn3Gcr743VOwe55ZYEEUWrn4fkd9EuJNNjMHbYdAdxM8Fys2is3IUSLQiG1ZzLuRZQ0U_JNuedrN3fwT0ZPBS-FBU87Nh0aytuARPfKFtI7-ZKI"/>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Siti Nurhaliza, M.Kom.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">Analisis Sistem &amp; QA</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Sistem Analis</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">UML &amp; QA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Agus Prasetyo, S.Pd." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv4O5IhHmU9W8eROF_fl4Q3MRJLSSlted4Sf3KxyQ3SNR0KBHz61qVNgESGN1954MJaWMtj1-Yv56rIvsDfTWK6v_jEHYgsk2blPofUDzQaJ_M1TGIrbwKci-9qQh5OHZZ7qtufXr2u68gFfmtVvrYCIjtzS9zCKMLnAnOQWP33NqMUV-KxvCgPYUNH0lgaymg8WEYNeLjECR_GLbX7sHu_AKWDSfYQF3IdjBwvyQ"/>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Agus Prasetyo, S.Pd.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">Jaringan &amp; Cloud Dasar</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Infrastruktur</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">Linux Server</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Maya Kusuma, S.E." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtQOo6jacH9DOMcEVBXWTEs99ncuIEEN32HvYKPcu8Zwiv0sup1hioIJmQGKzI5Cfd4qLDy8-xOOHe7f_EUx6ZSeCppCr3YFFDLrpWRZEW9tS86ZTzEt2RckhqERxkerOSXfwfb06wazu2nMUl8V9ei59BsVdxPxsO21ZgVZIRJGoFQGQ1VGxGWIug-i7YVv12UpLYQgxDkG2YtPyOXJiWiS4JXONEz02v3Pq3j6Y"/>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Maya Kusuma, S.E.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">Kewirausahaan Digital</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Technopreneur</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">Produk Kreatif</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="group bg-white border border-[#E5E7EB] rounded overflow-hidden hover:shadow-lg transition-all duration-200 flex flex-col">
+              <div class="aspect-[3/4] w-full overflow-hidden bg-[#EFF4FF] relative">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Hendra Gunawan, S.Kom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFg4b-GiB0h3C4CRoj70OyMyVSYXZfn70SjW72N2Scr3qAgVgA4tMntLLjTS66pNvvKP3ZhokEQsE_fXimiOt1VU5Pnfuoe8ed7h6_Jui-2WI1IVriWymyspzMFMMgzST9mRBXifKgVPYKZL-F6wwK44DDIXpPomEcu8qagw2CqhAZP_hFSSpu8oet2Bl0HePvLDee5eybg_loOlQDnqdiUSmHn-CsLXPHskjQMbw"/>
+              </div>
+              <div class="p-5 flex flex-col flex-1 justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66] mb-1">Hendra Gunawan, S.Kom.</h3>
+                  <p class="text-xs font-semibold text-[#F5B400] mb-3">UI/UX &amp; Prototyping</p>
+                </div>
+                <div class="pt-3 border-t border-[#F0F2F5] flex flex-wrap gap-1.5 items-center">
+                  <span class="inline-block bg-[#EFF4FF] text-[#0B3A66] text-xs font-semibold px-2 py-0.5 rounded">Figma</span>
+                  <span class="inline-block bg-[#F8F9FF] text-[#4b5563] text-xs px-2 py-0.5 rounded border border-[#E5E7EB]">User Experience</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Institutional Assurance Note -->
+          <div class="mt-14 sm:mt-16 bg-white border border-[#E5E7EB] p-6 sm:p-8 rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-[#F5B400] text-[#0B3A66] flex items-center justify-center shrink-0 rounded">
+                <span class="material-symbols-outlined text-[28px]">handshake</span>
+              </div>
+              <div>
+                <h4 class="font-['Space_Grotesk'] text-base sm:text-lg text-[#0B3A66] font-bold">Kolaborasi Praktisi Industri &amp; Guru Tamu</h4>
+                <p class="text-xs sm:text-sm text-[#4b5563] max-w-2xl mt-1 leading-relaxed">
+                  Selain pengajar tetap, siswa RPL SMKN 2 BANDAR LAMPUNG dibimbing langsung oleh Senior Engineer dari perusahaan mitra melalui program <em>Teaching Factory</em> berkala setiap bulan.
+                </p>
+              </div>
+            </div>
+            <a class="shrink-0 bg-[#0B3A66] hover:bg-[#08325A] text-white text-sm px-6 py-3 rounded font-semibold transition-colors duration-200" href="kontak.html">
+              Konsultasi Pembelajaran
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp Action -->
+  <div class="floating-whatsapp">
+    <div class="whatsapp-tooltip">Hubungi Kami via WhatsApp</div>
+    <a aria-label="Bantuan WhatsApp RPL" class="floating-whatsapp-btn" href="https://wa.me/6289507972498" rel="noopener noreferrer" target="_blank">
+      <span class="material-symbols-outlined text-[28px]">support_agent</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#0B3A66] text-white pt-14 pb-8 border-t border-[#08325A]">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 pb-12">
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">SMKN 2 BANDAR LAMPUNG</h3>
+          <p class="text-sm font-semibold text-white/90">Jurusan Rekayasa Perangkat Lunak</p>
+          <div class="space-y-2.5 text-white/80 text-sm pt-2">
+            <p class="flex items-start gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">location_on</span>
+              <span>Jl Prof. Dr. Ir. Sumantri Brojonegoro 1 35141 Labuhan Ratu Lampung</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">mail</span>
+              <span>rpl@smkn2bdl.sch.id</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">call</span>
+              <span>+62 895-0797-2498</span>
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">Navigasi Cepat</h3>
+          <ul class="space-y-2 text-sm">
+            <li data-path="beranda"><a class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors" href="index.html">Beranda</a></li>
+            <li data-path="keunggulan"><a class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors" href="index.html#mengapa-rpl">Keunggulan</a></li>
+            <li data-path="tenaga-pendidik"><a class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors" href="tenaga-pendidik.html">Tenaga Pendidik</a></li>
+            <li data-path="fasilitas-kurikulum"><a class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors" href="fasilitas-kurikulum.html">Fasilitas &amp; Kurikulum</a></li>
+            <li data-path="karya-siswa"><a class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors" href="karya-siswa.html">Karya Siswa</a></li>
+            <li data-path="kontak"><a class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">Media Sosial &amp; Jam Layanan</h3>
+          <div class="flex items-center gap-3 text-white/90">
+            <a aria-label="Instagram" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" href="#" title="Instagram"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
+            <a aria-label="Website Resmi SMKN 2" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" href="https://smkn2bdl.sch.id/" target="_blank" rel="noopener noreferrer" title="Website SMKN 2"><span class="material-symbols-outlined text-[20px]">public</span></a>
+            <a aria-label="TikTok" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" href="#" title="TikTok"><span class="material-symbols-outlined text-[20px]">music_note</span></a>
+            <a aria-label="YouTube" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" href="#" title="YouTube"><span class="material-symbols-outlined text-[20px]">smart_display</span></a>
+          </div>
+          <div class="pt-2 space-y-1 text-sm text-white/80">
+            <p class="font-semibold text-white/95">Jam Operasional &amp; Konsultasi:</p>
+            <p>Senin – Jumat: 07.00 – 16.00 WIB</p>
+            <p class="text-white/60">Sabtu, Minggu &amp; Libur Nasional: Tutup</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 text-center text-xs text-white/70">
+        <p>© 2026 SMKN 2 BANDAR LAMPUNG — Jurusan Rekayasa Perangkat Lunak. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Separated Interactive JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informasi &amp; Kontak - Profil RPL SMKN 2 BANDAR LAMPUNG</title>
+
+  <!-- Google Fonts & Material Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+  <!-- Tailwind CDN & Custom Stylesheet -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body data-page="kontak" class="bg-[#f8f9ff] text-[#121c2a] font-['Hanken_Grotesk']">
+
+  <!-- ================================================================= -->
+  <!-- HEADER & NAVBAR                                                   -->
+  <!-- ================================================================= -->
+  <header class="site-header">
+    <!-- Top Bar -->
+    <div class="header-top-bar">
+      <div class="header-top-container">
+        <!-- Brand / Logo -->
+        <a href="index.html" class="brand-link" title="Beranda SMKN 2 BANDAR LAMPUNG">
+          <img 
+            src="assets/images/logosmk.png" 
+            alt="Logo SMKN 2 BANDAR LAMPUNG" 
+            class="brand-logo"
+          />
+          <div class="brand-text-group">
+            <span class="brand-title">SMKN 2 BANDAR LAMPUNG</span>
+            <span class="brand-subtitle">Jurusan Rekayasa Perangkat Lunak</span>
+          </div>
+        </a>
+
+        <!-- Desktop Social Channels -->
+        <div class="header-social-links">
+          <a href="#" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+            <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="YouTube" title="YouTube">
+            <span class="material-symbols-outlined text-[20px]">smart_display</span>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="Facebook" title="Facebook">
+            <span class="material-symbols-outlined text-[20px]">public</span>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="TikTok" title="TikTok">
+            <span class="material-symbols-outlined text-[20px]">music_note</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button 
+          id="mobile-nav-toggle" 
+          class="mobile-toggle-btn" 
+          aria-label="Buka Menu Navigasi" 
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined text-[28px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Bar (Desktop) -->
+    <div class="header-nav-bar">
+      <div class="header-nav-container">
+        <nav class="desktop-nav" aria-label="Navigasi Utama">
+          <a href="index.html" class="nav-link" data-path="beranda">Beranda</a>
+          <a href="index.html#mengapa-rpl" class="nav-link" data-path="keunggulan">Keunggulan</a>
+          <a href="tenaga-pendidik.html" class="nav-link" data-path="tenaga-pendidik">Tenaga Pendidik</a>
+          <a href="fasilitas-kurikulum.html" class="nav-link" data-path="fasilitas-kurikulum">Fasilitas &amp; Kurikulum</a>
+          <a href="karya-siswa.html" class="nav-link" data-path="karya-siswa">Karya Siswa</a>
+          <a href="kontak.html" class="nav-link" data-path="kontak">Kontak</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-1.5 text-white/80 text-xs font-semibold">
+          <span class="material-symbols-outlined text-[16px] text-[#F5B400]">verified</span>
+          <span>Terakreditasi A • SMK PK</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================================================================= -->
+  <!-- MOBILE DRAWER MENU                                                -->
+  <!-- ================================================================= -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-label="Menu Navigasi Mobile">
+    <div class="drawer-header">
+      <span class="drawer-title">Menu Navigasi</span>
+      <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Tutup Menu">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link" data-path="beranda">
+        <span class="material-symbols-outlined text-[20px]">home</span>
+        <span>Beranda</span>
+      </a>
+      <a href="index.html#mengapa-rpl" class="drawer-link" data-path="keunggulan">
+        <span class="material-symbols-outlined text-[20px]">star</span>
+        <span>Keunggulan RPL</span>
+      </a>
+      <a href="tenaga-pendidik.html" class="drawer-link" data-path="tenaga-pendidik">
+        <span class="material-symbols-outlined text-[20px]">badge</span>
+        <span>Tenaga Pendidik</span>
+      </a>
+      <a href="fasilitas-kurikulum.html" class="drawer-link" data-path="fasilitas-kurikulum">
+        <span class="material-symbols-outlined text-[20px]">school</span>
+        <span>Fasilitas &amp; Kurikulum</span>
+      </a>
+      <a href="karya-siswa.html" class="drawer-link" data-path="karya-siswa">
+        <span class="material-symbols-outlined text-[20px]">terminal</span>
+        <span>Karya Siswa</span>
+      </a>
+      <a href="kontak.html" class="drawer-link" data-path="kontak">
+        <span class="material-symbols-outlined text-[20px]">call</span>
+        <span>Kontak &amp; Lokasi</span>
+      </a>
+    </nav>
+
+    <div class="drawer-footer">
+      <p class="text-xs font-semibold text-white/70 uppercase tracking-wider mb-2.5">
+        Konsultasi Jurusan
+      </p>
+      <a 
+        href="https://wa.me/6289507972498" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-sm rounded transition-colors shadow"
+      >
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        <span>WhatsApp Resmi</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MAIN CONTENT                                                      -->
+  <!-- ================================================================= -->
+  <main class="main-content">
+    <div class="flex flex-col w-full">
+
+      <!-- Hero Banner -->
+      <section class="w-full bg-[#0B3A66] text-white py-10 sm:py-14 relative overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="max-w-2xl">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="inline-block w-2.5 h-2.5 bg-[#F5B400] rounded-sm"></span>
+              <span class="text-xs font-bold uppercase tracking-widest text-[#F5B400]">
+                Saluran Resmi &amp; Kemitraan
+              </span>
+            </div>
+            <h1 class="font-['Space_Grotesk'] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+              Informasi &amp; Kontak
+            </h1>
+            <div class="w-16 h-[3px] bg-[#F5B400] my-4"></div>
+            <p class="text-sm sm:text-base md:text-lg text-white/85 leading-relaxed">
+              Hubungi kami untuk informasi kurikulum, pendaftaran siswa baru, kemitraan industri (PKL/rekrutmen), maupun agenda kunjungan laboratorium RPL.
+            </p>
+          </div>
+
+          <!-- Campus Photos Panel -->
+          <div class="w-full lg:w-auto shrink-0 flex items-center gap-3">
+            <div class="relative w-40 sm:w-44 h-32 overflow-hidden shadow-lg border border-white/20 rounded">
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOgcg6gCJaCN55V-7KFdQJV-tYJv6z3h3KV1Oux6PxBPSrCSRXgKrWSkGBL1OVcR3PwaJw5Wbnmwm5fwmn-tdKGgNoRVnTs_jq66aDYKpHnXSFR3HraqlCjnAvNVSyEJzrjNaAkAqxZJZraheEnwwqah1TZaFqVMUskZC1paHItlR1hwsvbItqo3gHNeMrcm8-kjB4Ys11LUYcjLogw_2NqJVOHV4g9hHkH1t-QJE" 
+                alt="Front Office Gedung B" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute bottom-0 inset-x-0 bg-[#08325A]/90 px-2 py-1 text-center">
+                <span class="text-[11px] text-white tracking-wide uppercase font-semibold">Front Office Gedung B</span>
+              </div>
+            </div>
+
+            <div class="relative w-40 sm:w-44 h-32 overflow-hidden shadow-lg border border-white/20 rounded hidden sm:block">
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTOFN5IR2OZNLFNbI9Sj68MUz1Kzyal9MBbpZD0G0kJ3EWO_Kn0njOS1SDTbly1UAGab6Zt6CN5ZV_O1DYlMHS5NAXRzVMJWqB5OIFC6_QiPF7WrBK2lUxqtCqaFu6ZE5yXWabw_fefo8bchDaJm4Uvj-t0eY-PxlOlwM14ObjQ0MDmafSHZ0VnXhDVGYVrbCnHRcjsSVtJvDaNI_Gi_U8Z9eVmt1ZmaLKy3mbxu4" 
+                alt="Kampus Utama SMK Nusantara" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute bottom-0 inset-x-0 bg-[#08325A]/90 px-2 py-1 text-center">
+                <span class="text-[11px] text-white tracking-wide uppercase font-semibold">Kampus Utama</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main 2-Column Contact Section -->
+      <section class="w-full bg-[#f8f9ff] py-14 sm:py-20">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+
+          <!-- Success Notification Banner (Triggered by Form Submit) -->
+          <div id="contact-success-banner" class="hidden mb-8 p-4 bg-emerald-50 border border-emerald-600/40 text-emerald-900 rounded flex items-center justify-between shadow-sm">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-emerald-600 text-[26px]">check_circle</span>
+              <div>
+                <p class="text-sm font-bold">Pesan Berhasil Terkirim</p>
+                <p class="text-xs text-emerald-800">
+                  Tim Program Keahlian RPL SMKN 2 BANDAR LAMPUNG akan segera merespons via WhatsApp atau email dalam 1x24 jam kerja.
+                </p>
+              </div>
+            </div>
+            <button 
+              type="button" 
+              class="text-emerald-700 hover:text-emerald-950 p-1" 
+              onclick="document.getElementById('contact-success-banner').classList.add('hidden')"
+              aria-label="Tutup Notifikasi"
+            >
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+
+          <!-- Two Column Layout: Info Card + Contact Form -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- Left Column: Official Contact Card -->
+            <div class="lg:col-span-5 bg-white border border-[#E5E7EB] rounded p-6 sm:p-8 shadow-sm">
+              <div class="border-b border-[#E5E7EB] pb-5 mb-6">
+                <div class="flex items-center gap-2 text-[#0B3A66] font-bold mb-1">
+                  <span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+                  <span class="text-xs uppercase tracking-wider">Kesekretariatan</span>
+                </div>
+                <h3 class="font-['Space_Grotesk'] text-xl font-bold text-[#0B3A66]">
+                  Kantor Program Keahlian RPL
+                </h3>
+              </div>
+
+              <ul class="space-y-6">
+                <!-- Address -->
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded bg-[#EFF4FF] flex items-center justify-center shrink-0 text-[#0B3A66]">
+                    <span class="material-symbols-outlined text-[22px]">location_on</span>
+                  </div>
+                  <div>
+                    <span class="block text-xs font-semibold text-[#121c2a] uppercase">Alamat Fisik Kampus</span>
+                    <p class="text-sm text-[#4b5563] mt-0.5 leading-relaxed">
+                      Jl Prof. Dr. Ir. Sumantri Brojonegoro 1 35141 Labuhan Ratu Lampung<br/>
+                      <span class="text-[#3a608e] font-semibold">Ruangan RPL 1 (Ruang Staf &amp; Lab RPL Terpadu)</span>
+                    </p>
+                  </div>
+                </li>
+
+                <!-- Phone / WhatsApp -->
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded bg-[#EFF4FF] flex items-center justify-center shrink-0 text-[#0B3A66]">
+                    <span class="material-symbols-outlined text-[22px]">call</span>
+                  </div>
+                  <div>
+                    <span class="block text-xs font-semibold text-[#121c2a] uppercase">Telepon &amp; WhatsApp Resmi</span>
+                    <a 
+                      href="https://wa.me/6289507972498" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      class="text-sm text-[#0B3A66] hover:text-[#F5B400] font-bold transition-colors mt-0.5 inline-block"
+                    >
+                      +62 895-0797-2498
+                    </a>
+                    <p class="text-xs text-[#6b7280]">Layanan Senin – Jumat, 07.00 – 16.00 WIB</p>
+                  </div>
+                </li>
+
+                <!-- Email -->
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded bg-[#EFF4FF] flex items-center justify-center shrink-0 text-[#0B3A66]">
+                    <span class="material-symbols-outlined text-[22px]">mail</span>
+                  </div>
+                  <div>
+                    <span class="block text-xs font-semibold text-[#121c2a] uppercase">Surel Resmi Jurusan</span>
+                    <a 
+                      href="mailto:apanyak" 
+                      class="text-sm text-[#0B3A66] hover:underline font-semibold mt-0.5 inline-block"
+                    >
+                      pariq ganteng cihuy
+                    </a>
+                    <p class="text-xs text-[#6b7280]">Untuk korespondensi dinas, kemitraan MoU, &amp; rekrutmen</p>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Industrial Visit Procedure Note -->
+              <div class="mt-8 p-4 bg-[#f8f9ff] border border-[#E5E7EB] rounded">
+                <div class="flex items-center gap-2 mb-1.5 text-[#0B3A66]">
+                  <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                  <span class="text-xs font-bold uppercase tracking-wider">Prosedur Kunjungan Tamu</span>
+                </div>
+                <p class="text-xs text-[#4b5563] leading-relaxed">
+                  Kunjungan kemitraan industri dibuka setiap hari kerja dengan konfirmasi resmi tertulis minimal 3 (tiga) hari kerja sebelum kedatangan.
+                </p>
+              </div>
+
+              <!-- Social Channels Grid -->
+              <div class="mt-8 pt-6 border-t border-[#E5E7EB]">
+                <span class="block text-xs font-bold uppercase tracking-wider text-[#121c2a] mb-3">
+                  Kanal Media Sosial Jurusan
+                </span>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                  <a href="#" class="flex items-center gap-2 p-2.5 border border-[#E5E7EB] rounded hover:border-[#0B3A66] hover:text-[#0B3A66] transition-colors bg-white">
+                    <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                    <span class="font-semibold">yahahhaa kepo</span>
+                  </a>
+                  <a href="#" class="flex items-center gap-2 p-2.5 border border-[#E5E7EB] rounded hover:border-[#0B3A66] hover:text-[#0B3A66] transition-colors bg-white">
+                    <span class="material-symbols-outlined text-[18px]">smart_display</span>
+                    <span class="font-semibold">yahahah kepo</span>
+                  </a>
+                  <a href="#" class="flex items-center gap-2 p-2.5 border border-[#E5E7EB] rounded hover:border-[#0B3A66] hover:text-[#0B3A66] transition-colors bg-white">
+                    <span class="material-symbols-outlined text-[18px]">public</span>
+                    <span class="font-semibold">yahahaha kepo</span>
+                  </a>
+                  <a href="#" class="flex items-center gap-2 p-2.5 border border-[#E5E7EB] rounded hover:border-[#0B3A66] hover:text-[#0B3A66] transition-colors bg-white">
+                    <span class="material-symbols-outlined text-[18px]">music_note</span>
+                    <span class="font-semibold">yahahaha kepo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Contact Form -->
+            <div class="lg:col-span-7 bg-white border border-[#E5E7EB] rounded p-6 sm:p-8 shadow-sm">
+              <div class="border-b border-[#E5E7EB] pb-5 mb-6">
+                <span class="text-xs uppercase tracking-wider font-bold text-[#F5B400]">Layanan Konsultasi &amp; Informasi</span>
+                <h3 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-bold text-[#0B3A66] mt-1">
+                  Kirim Pesan atau Pertanyaan
+                </h3>
+                <p class="text-xs sm:text-sm text-[#4b5563] mt-1.5 leading-relaxed">
+                  Tim kami akan merespons melalui WhatsApp atau email resmi dalam waktu 1x24 jam kerja operasional sekolah.
+                </p>
+              </div>
+
+              <!-- Form Element -->
+              <form id="contact-jurusan-form" class="space-y-5">
+                <!-- Nama Lengkap -->
+                <div class="space-y-1.5">
+                  <label for="nama_lengkap" class="block text-xs font-semibold text-[#121c2a] uppercase">
+                    Nama Lengkap <span class="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="nama_lengkap" 
+                    required 
+                    placeholder="Contoh: Muhammad Reza Pratama" 
+                    class="w-full h-11 px-4 text-sm bg-white border border-[#E5E7EB] rounded focus:outline-none focus:border-[#0B3A66] focus:ring-1 focus:ring-[#0B3A66] transition"
+                  />
+                </div>
+
+                <!-- WhatsApp & Email Inputs -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div class="space-y-1.5">
+                    <label for="whatsapp" class="block text-xs font-semibold text-[#121c2a] uppercase">
+                      Nomor WhatsApp <span class="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="tel" 
+                      id="whatsapp" 
+                      required 
+                      pattern="[0-9]{10,14}" 
+                      placeholder="08xxxxxxxxxx" 
+                      class="w-full h-11 px-4 text-sm bg-white border border-[#E5E7EB] rounded focus:outline-none focus:border-[#0B3A66] focus:ring-1 focus:ring-[#0B3A66] transition"
+                    />
+                    <span class="block text-[11px] text-[#6b7280]">Pastikan nomor terhubung dengan WhatsApp aktif</span>
+                  </div>
+
+                  <div class="space-y-1.5">
+                    <label for="email" class="block text-xs font-semibold text-[#121c2a] uppercase">
+                      Alamat Email <span class="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      required 
+                      placeholder="email@contoh.com" 
+                      class="w-full h-11 px-4 text-sm bg-white border border-[#E5E7EB] rounded focus:outline-none focus:border-[#0B3A66] focus:ring-1 focus:ring-[#0B3A66] transition"
+                    />
+                    <span class="block text-[11px] text-[#6b7280]">Kami mengirimkan salinan tiket pertanyaan</span>
+                  </div>
+                </div>
+
+                <!-- Kategori Kepentingan -->
+                <div class="space-y-1.5">
+                  <label for="kategori" class="block text-xs font-semibold text-[#121c2a] uppercase">
+                    Kategori Kepentingan
+                  </label>
+                  <select 
+                    id="kategori" 
+                    class="w-full h-11 px-4 text-sm bg-white border border-[#E5E7EB] rounded focus:outline-none focus:border-[#0B3A66] focus:ring-1 focus:ring-[#0B3A66] transition cursor-pointer"
+                  >
+                    <option value="ppdb">Informasi Calon Siswa Baru / PPDB RPL</option>
+                    <option value="pkl">Kemitraan PKL &amp; Magang Industri</option>
+                    <option value="rekrutmen">Penyaluran Tenaga Kerja / Rekrutmen Lulusan</option>
+                    <option value="kunjungan">Kunjungan Studi Banding / Guru Tamu</option>
+                    <option value="lainnya">Lain-lain / Konsultasi Teknis</option>
+                  </select>
+                </div>
+
+                <!-- Pesan Textarea -->
+                <div class="space-y-1.5">
+                  <label for="pesan" class="block text-xs font-semibold text-[#121c2a] uppercase">
+                    Uraian Pesan / Kebutuhan <span class="text-red-500">*</span>
+                  </label>
+                  <textarea 
+                    id="pesan" 
+                    required 
+                    rows="4" 
+                    placeholder="Tuliskan pesan, pertanyaan seputar kurikulum, atau penawaran kemitraan industri..." 
+                    class="w-full p-4 text-sm bg-white border border-[#E5E7EB] rounded focus:outline-none focus:border-[#0B3A66] focus:ring-1 focus:ring-[#0B3A66] transition"
+                  ></textarea>
+                </div>
+
+                <!-- Action Submit Buttons -->
+                <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                  <button 
+                    type="submit" 
+                    class="w-full sm:w-auto h-11 px-8 bg-[#F5B400] hover:bg-[#D99E00] text-[#0B3A66] font-bold text-sm rounded shadow-sm transition flex items-center justify-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">send</span>
+                    <span>Kirim Pesan</span>
+                  </button>
+                  <a 
+                    href="https://wa.me/6289507972498?text=Halo%20Admin%20RPL%20SMKN%202%20BANDAR%20LAMPUNG,%20saya%20ingin%20berkonsultasi." 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="w-full sm:w-auto h-11 px-6 border-2 border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A]/10 font-bold text-sm rounded transition flex items-center justify-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                    <span>Chat via WhatsApp</span>
+                  </a>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Campus Location Map Section -->
+      <section class="w-full bg-white py-14 sm:py-16 border-t border-[#E5E7EB]">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#0B3A66]">Navigasi Sekolah</span>
+            <h2 class="font-['Space_Grotesk'] text-2xl sm:text-3xl font-bold text-[#0B3A66] mt-1">
+              Lokasi Ruangan RPL SMKN 2 BANDAR LAMPUNG
+            </h2>
+            <div class="w-16 h-[3px] bg-[#F5B400] mt-3"></div>
+            <p class="text-sm text-[#4b5563] mt-2 leading-relaxed max-w-2xl">
+              Akses mudah melalui jalur arteri utama kota, dekat dengan koridor transportasi publik dan kawasan sentra industri teknologi.
+            </p>
+          </div>
+
+          <!-- Interactive Map Container Box -->
+          <div class="w-full h-[280px] sm:h-[360px] md:h-[420px] rounded border border-[#E5E7EB] relative overflow-hidden bg-slate-100 shadow-inner">
+            <!-- Map Background Placeholder -->
+            <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://www.google.com/maps/place/SMK+Negeri+2+Bandar+Lampung')">
+              <div class="absolute inset-0 bg-[#08325A]/20 pointer-events-none"></div>
+
+              <!-- Map Central Pin Indicator -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <div class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded shadow-lg border border-[#F5B400] flex items-center gap-2 whitespace-nowrap animate-bounce">
+                  <span class="material-symbols-outlined text-[18px] text-[#F5B400]">school</span>
+                  <span class="text-xs font-bold">SMKNN 2 BANDAR LAMPUNG - Lab RPL</span>
+                </div>
+                <div class="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#0B3A66]"></div>
+                <div class="w-4 h-4 bg-[#F5B400] rounded-full border-2 border-white shadow-md mt-0.5"></div>
+              </div>
+
+              <!-- Top-Right Google Maps Button -->
+              <div class="absolute top-4 right-4 z-10">
+                <a 
+                  href="https://www.bing.com/maps/search?mepi=0~~Embedded~Address_Link&ty=18&v=2&sV=1&FORM=MPSRPL&ss=id.ypid%3AYN38D862B1DECCE3FD&q=State+Vocational+High+School+2+Bandar+Lampung&ppois=-5.364029407501221_105.24578857421875_State+Vocational+High+School+2+Bandar+Lampung_YN38D862B1DECCE3FD~&cp=-5.364029~105.245789&lvl=11&style=r" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="bg-white text-[#0B3A66] border border-[#0B3A66] text-xs font-semibold px-4 py-2 rounded shadow-md flex items-center gap-1.5 hover:bg-[#0B3A66] hover:text-white transition"
+                >
+                  <span class="material-symbols-outlined text-[16px]">map</span>
+                  <span>Buka di Google Maps</span>
+                </a>
+              </div>
+
+              <!-- Coordinates Badge -->
+              <div class="absolute bottom-4 left-4 z-10 hidden sm:flex items-center gap-2 bg-white/95 px-3 py-1.5 rounded border border-[#E5E7EB] text-[#121c2a] shadow-sm text-xs">
+                <span class="material-symbols-outlined text-[16px] text-[#3a608e]">explore</span>
+                <span class="font-semibold">Koordinat GPS: -5.363916, 105.244412</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Directions Footnotes (3 Cards) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="p-5 bg-[#f8f9ff] border border-[#E5E7EB] rounded">
+              <div class="flex items-center gap-2 text-[#0B3A66] font-bold text-sm mb-1.5">
+                <span class="material-symbols-outlined text-[20px]">directions_bus</span>
+                <span>Akses Kendaraan Umum</span>
+              </div>
+              <p class="text-xs text-[#4b5563] leading-relaxed">
+                Turun di Halte Terpadu Pendidikan Timur, berjalan kaki 150 meter ke arah barat melewati pintu gerbang 1.
+              </p>
+            </div>
+
+            <div class="p-5 bg-[#f8f9ff] border border-[#E5E7EB] rounded">
+              <div class="flex items-center gap-2 text-[#0B3A66] font-bold text-sm mb-1.5">
+                <span class="material-symbols-outlined text-[20px]">local_parking</span>
+                <span>Fasilitas Parkir Tamu</span>
+              </div>
+              <p class="text-xs text-[#4b5563] leading-relaxed">
+                Tersedia area parkir kendaraan roda 4 dan roda 2 di pelataran sayap selatan Gedung B secara teratur dan aman.
+              </p>
+            </div>
+
+            <div class="p-5 bg-[#f8f9ff] border border-[#E5E7EB] rounded">
+              <div class="flex items-center gap-2 text-[#0B3A66] font-bold text-sm mb-1.5">
+                <span class="material-symbols-outlined text-[20px]">badge</span>
+                <span>Protokol Keamanan</span>
+              </div>
+              <p class="text-xs text-[#4b5563] leading-relaxed">
+                Setiap pengunjung wajib menukarkan kartu identitas (KTP/SIM) dengan Visitor Badge di pos jaga satpam gerbang utama.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- FLOATING WHATSAPP BUTTON                                          -->
+  <!-- ================================================================= -->
+  <div class="floating-whatsapp">
+    <div class="whatsapp-tooltip">Hubungi Kami via WhatsApp</div>
+    <a 
+      href="https://wa.me/6289507972498" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="floating-whatsapp-btn" 
+      aria-label="Bantuan WhatsApp RPL"
+    >
+      <span class="material-symbols-outlined text-[28px]">support_agent</span>
+    </a>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- FOOTER                                                            -->
+  <!-- ================================================================= -->
+  <footer class="w-full bg-[#0B3A66] text-white pt-14 pb-8 border-t border-[#08325A]">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 pb-12">
+        <!-- School Info -->
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">
+            SMKN 2 BANDAR LAMPUNG
+          </h3>
+          <p class="text-sm font-semibold text-white/90">Jurusan Rekayasa Perangkat Lunak</p>
+          <div class="space-y-2.5 text-white/80 text-sm pt-2">
+            <p class="flex items-start gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">location_on</span>
+              <span>Jl. Prof. Dr. Ir. Sumantri Brojonegoro No.1, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35141</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">mail</span>
+              <span>rpl@smkn2bdl.sch.id</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">call</span>
+              <span>+62 895-0797-2498</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">
+            Navigasi Cepat
+          </h3>
+          <ul class="space-y-2 text-sm">
+            <li data-path="beranda"><a href="index.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Beranda</a></li>
+            <li data-path="keunggulan"><a href="index.html#mengapa-rpl" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Keunggulan</a></li>
+            <li data-path="tenaga-pendidik"><a href="tenaga-pendidik.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Tenaga Pendidik</a></li>
+            <li data-path="fasilitas-kurikulum"><a href="fasilitas-kurikulum.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Fasilitas &amp; Kurikulum</a></li>
+            <li data-path="karya-siswa"><a href="karya-siswa.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Karya Siswa</a></li>
+            <li data-path="kontak"><a href="kontak.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media & Office Hours -->
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">
+            Media Sosial &amp; Jam Layanan
+          </h3>
+          <div class="flex items-center gap-3 text-white/90">
+            <a href="#" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="Instagram">
+              <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+            </a>
+            <a href="#" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="YouTube">
+              <span class="material-symbols-outlined text-[20px]">smart_display</span>
+            </a>
+            <a href="#" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="Facebook">
+              <span class="material-symbols-outlined text-[20px]">public</span>
+            </a>
+            <a href="#" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="TikTok">
+              <span class="material-symbols-outlined text-[20px]">music_note</span>
+            </a>
+          </div>
+          <div class="pt-2 space-y-1 text-sm text-white/80">
+            <p class="font-semibold text-white/95">Jam Operasional &amp; Konsultasi:</p>
+            <p>Senin – Jumat: 07.00 – 16.00 WIB</p>
+            <p class="text-white/60">Sabtu, Minggu &amp; Libur Nasional: Tutup</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 text-center text-xs text-white/70">
+        <p>© 2026 SMKN 2 BANDAR LAMPUNG — Jurusan Rekayasa Perangkat Lunak. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

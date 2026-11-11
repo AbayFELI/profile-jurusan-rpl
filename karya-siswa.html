@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karya Siswa - Profil RPL SMKN 2 BANDAR LAMPUNG</title>
+
+  <!-- Google Fonts & Material Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+  <!-- Tailwind CDN & Custom Stylesheet -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body data-page="karya-siswa" class="bg-[#f8f9ff] text-[#121c2a] font-['Hanken_Grotesk']">
+
+  <!-- ================================================================= -->
+  <!-- HEADER & NAVBAR                                                   -->
+  <!-- ================================================================= -->
+  <header class="site-header">
+    <!-- Top Bar -->
+    <div class="header-top-bar">
+      <div class="header-top-container">
+        <!-- Brand / Logo -->
+        <a href="index.html" class="brand-link" title="Beranda SMKN 2 BANDAR LAMPUNG">
+          <img 
+            src="assets/images/logosmk.png" 
+            alt="Logo SMKN 2 BANDAR LAMPUNG" 
+            class="brand-logo"
+          />
+          <div class="brand-text-group">
+            <span class="brand-title">SMKN 2 BANDAR LAMPUNG</span>
+            <span class="brand-subtitle">Jurusan Rekayasa Perangkat Lunak</span>
+          </div>
+        </a>
+
+        <!-- Desktop Social Channels -->
+        <div class="header-social-links">
+          <a href="#" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+            <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+          </a>
+          <a href="https://smkn2bdl.sch.id/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Website Resmi SMKN 2" title="Website SMKN 2">
+            <span class="material-symbols-outlined text-[20px]">public</span>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="TikTok" title="TikTok">
+            <span class="material-symbols-outlined text-[20px]">music_note</span>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="YouTube" title="YouTube">
+            <span class="material-symbols-outlined text-[20px]">smart_display</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button 
+          id="mobile-nav-toggle" 
+          class="mobile-toggle-btn" 
+          aria-label="Buka Menu Navigasi" 
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined text-[28px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Bar (Desktop) -->
+    <div class="header-nav-bar">
+      <div class="header-nav-container">
+        <nav class="desktop-nav" aria-label="Navigasi Utama">
+          <a href="index.html" class="nav-link" data-path="beranda">Beranda</a>
+          <a href="index.html#mengapa-rpl" class="nav-link" data-path="keunggulan">Keunggulan</a>
+          <a href="tenaga-pendidik.html" class="nav-link" data-path="tenaga-pendidik">Tenaga Pendidik</a>
+          <a href="fasilitas-kurikulum.html" class="nav-link" data-path="fasilitas-kurikulum">Fasilitas &amp; Kurikulum</a>
+          <a href="karya-siswa.html" class="nav-link" data-path="karya-siswa">Karya Siswa</a>
+          <a href="kontak.html" class="nav-link" data-path="kontak">Kontak</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-1.5 text-white/80 text-xs font-semibold">
+          <span class="material-symbols-outlined text-[16px] text-[#F5B400]">verified</span>
+          <span>Terakreditasi A • SMK PK</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================================================================= -->
+  <!-- MOBILE DRAWER MENU                                                -->
+  <!-- ================================================================= -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-label="Menu Navigasi Mobile">
+    <div class="drawer-header">
+      <span class="drawer-title">Menu Navigasi</span>
+      <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Tutup Menu">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link" data-path="beranda">
+        <span class="material-symbols-outlined text-[20px]">home</span>
+        <span>Beranda</span>
+      </a>
+      <a href="index.html#mengapa-rpl" class="drawer-link" data-path="keunggulan">
+        <span class="material-symbols-outlined text-[20px]">star</span>
+        <span>Keunggulan RPL</span>
+      </a>
+      <a href="tenaga-pendidik.html" class="drawer-link" data-path="tenaga-pendidik">
+        <span class="material-symbols-outlined text-[20px]">badge</span>
+        <span>Tenaga Pendidik</span>
+      </a>
+      <a href="fasilitas-kurikulum.html" class="drawer-link" data-path="fasilitas-kurikulum">
+        <span class="material-symbols-outlined text-[20px]">school</span>
+        <span>Fasilitas &amp; Kurikulum</span>
+      </a>
+      <a href="karya-siswa.html" class="drawer-link" data-path="karya-siswa">
+        <span class="material-symbols-outlined text-[20px]">terminal</span>
+        <span>Karya Siswa</span>
+      </a>
+      <a href="kontak.html" class="drawer-link" data-path="kontak">
+        <span class="material-symbols-outlined text-[20px]">call</span>
+        <span>Kontak &amp; Lokasi</span>
+      </a>
+    </nav>
+
+    <div class="drawer-footer">
+      <p class="text-xs font-semibold text-white/70 uppercase tracking-wider mb-2.5">
+        Konsultasi Jurusan
+      </p>
+      <a 
+        href="https://wa.me/6289507972498" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-sm rounded transition-colors shadow"
+      >
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        <span>WhatsApp Resmi</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MAIN CONTENT                                                      -->
+  <!-- ================================================================= -->
+  <main class="main-content">
+    <div class="flex flex-col w-full">
+
+      <!-- Hero Banner -->
+      <section class="w-full bg-[#0B3A66] text-white">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 min-h-[240px] sm:min-h-[260px] py-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="max-w-2xl flex flex-col justify-center">
+            <div class="inline-flex items-center gap-2 text-[#F5B400] text-xs font-bold tracking-widest uppercase mb-2">
+              <span class="w-2 h-2 bg-[#F5B400] rounded-sm"></span>
+              <span>Etalase Kompetensi Siswa</span>
+            </div>
+            <h1 class="font-['Space_Grotesk'] text-3xl sm:text-4xl lg:text-5xl leading-tight font-bold">
+              Galeri Karya Siswa
+            </h1>
+            <div class="w-16 h-[3px] bg-[#F5B400] mt-3"></div>
+            <p class="text-sm sm:text-base text-white/85 mt-3 max-w-xl leading-relaxed">
+              Showcase portofolio aplikasi, website, dan sistem digital yang dibangun secara mandiri maupun tim oleh siswa RPL SMKN 2 BANDAR LAMPUNG.
+            </p>
+          </div>
+
+          <!-- Decorative Photo Strip (Desktop Only) -->
+          <div class="hidden md:flex items-center gap-3 shrink-0">
+            <div class="w-32 h-40 bg-[#08325A] relative overflow-hidden border border-white/10 rounded shadow">
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv0jP33BbpNRYAWHiKcyYC9rhVXjBMZbVAbuM7UMPAPmBRh6PkkdG8lcMYN8ucphRcbXxV-nkgCt00bq1hkBuAOWBqypYRIP-IFbUBd7BY7OcGphoruKTc_qlrivfF3L5UiGnAGPMk9W2Q--OCcclLBAIzNS99t0mZ_eucR50Bb0-rn90WFus7KPB66btn2AGFMCN1a3ko3_SUixBsnaDRb9CjY8HaAGPlXAGAeqY" 
+                alt="Presentasi Web Siswa" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B3A66] via-transparent to-transparent opacity-80"></div>
+              <span class="absolute bottom-2 left-2 text-[11px] text-white/90 font-semibold">Demo Web</span>
+            </div>
+
+            <div class="w-32 h-44 bg-[#08325A] relative overflow-hidden border border-white/20 rounded shadow -translate-y-2">
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcqfktt6fZkYnMaukPqEuHIFnsjNIeRLkN1LhknrABevu4bQl91YmeAJLnWGyLELPlX2i8f3WD0xxSLPAd5yqKkQE96liMMn-8rxYv_j5ndC7xDCjvkVTBU5qmdY8P_KJaj1VfVtWgbtCmGn_23K034Ac0VROMfoV5thij5IQfWxadOALmxHXmYc28mDBLNNe2pHi9UHHFPwh7qEiquua96h1lWwed91H916IbqZk" 
+                alt="Pengujian IoT Siswa" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B3A66] via-transparent to-transparent opacity-80"></div>
+              <span class="absolute bottom-2 left-2 text-[11px] text-[#F5B400] font-bold">Testing IoT</span>
+            </div>
+
+            <div class="w-32 h-40 bg-[#08325A] relative overflow-hidden border border-white/10 rounded shadow">
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLCiVXmblvDeM5lvKg6gYXmf9D0K9mLsnmNwrubktNR8DsmDIfmKXH1bxW3EElNZCTpSqkCRHFf89-qBcBGHtljLmJmURnGAyy74rou9n9u15xQGLaC-SkFOJvOxnamUZeJIIJFV7EkAyWqN6yubD8TNQWHlQCeLwy2PXPRXeM9s3zD4lj8qfKCERpjim-eY3K3LUiz9yNNEWVQ_R5Xs7-T4i39MAgdzUlPtE-7XM" 
+                alt="Mobile App Demo" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B3A66] via-transparent to-transparent opacity-80"></div>
+              <span class="absolute bottom-2 left-2 text-[11px] text-white/90 font-semibold">Mobile Apps</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Filter Bar -->
+      <section class="w-full bg-white border-b border-[#E5E7EB] sticky top-[72px] md:top-[124px] z-30 shadow-sm">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+          <!-- Filter Buttons (Smooth Horizontal Scroll on Mobile) -->
+          <div id="filter-container" class="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none w-full sm:w-auto">
+            <button class="filter-btn h-10 md:h-11 px-5 md:px-6 text-sm font-semibold rounded transition-all bg-[#0B3A66] text-white shadow-sm flex items-center gap-2 shrink-0" data-filter="all">
+              <span>Semua</span>
+              <span class="text-xs bg-white/20 px-1.5 py-0.5 rounded ml-1">9</span>
+            </button>
+            <button class="filter-btn h-10 md:h-11 px-5 md:px-6 text-sm font-semibold rounded transition-all bg-white text-[#0B3A66] border border-[#E5E7EB] hover:bg-[#eff4ff] flex items-center gap-2 shrink-0" data-filter="aplikasi">
+              <span>Aplikasi</span>
+              <span class="text-xs bg-[#eff4ff] text-[#0B3A66] px-1.5 py-0.5 rounded ml-1">3</span>
+            </button>
+            <button class="filter-btn h-10 md:h-11 px-5 md:px-6 text-sm font-semibold rounded transition-all bg-white text-[#0B3A66] border border-[#E5E7EB] hover:bg-[#eff4ff] flex items-center gap-2 shrink-0" data-filter="web">
+              <span>Web</span>
+              <span class="text-xs bg-[#eff4ff] text-[#0B3A66] px-1.5 py-0.5 rounded ml-1">4</span>
+            </button>
+            <button class="filter-btn h-10 md:h-11 px-5 md:px-6 text-sm font-semibold rounded transition-all bg-white text-[#0B3A66] border border-[#E5E7EB] hover:bg-[#eff4ff] flex items-center gap-2 shrink-0" data-filter="jaringan">
+              <span>Jaringan &amp; IoT</span>
+              <span class="text-xs bg-[#eff4ff] text-[#0B3A66] px-1.5 py-0.5 rounded ml-1">2</span>
+            </button>
+          </div>
+
+          <!-- Quality Badge -->
+          <div class="hidden lg:flex items-center gap-2 text-xs text-[#4b5563] font-medium">
+            <span class="material-symbols-outlined text-[18px] text-[#0B3A66]">verified</span>
+            <span>Standar Uji Kompetensi Keahlian (UKK) &amp; Industri</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Grid Section -->
+      <section class="w-full bg-[#f8f9ff] py-12 sm:py-16">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Sub-header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-4 border-b border-[#E5E7EB] gap-2">
+            <div>
+              <h2 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-bold text-[#0B3A66] flex items-center gap-2">
+                <span>Daftar Proyek Unggulan Terverifikasi</span>
+                <span class="w-2 h-2 rounded-full bg-[#F5B400]"></span>
+              </h2>
+              <p class="text-xs sm:text-sm text-[#4b5563] mt-1">
+                Klik kartu untuk melihat rincian arsitektur teknologi dan profil tim pengembang.
+              </p>
+            </div>
+            <div class="text-xs sm:text-sm text-[#0B3A66] font-semibold flex items-center gap-1.5 shrink-0">
+              <span class="material-symbols-outlined text-[18px]">layers</span>
+              <span id="project-count">Menampilkan 9 Hasil</span>
+            </div>
+          </div>
+
+          <!-- Cards Grid (9 Projects) -->
+          <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1: SIAKAD Mini -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="web" onclick="openDetailModal('siakad')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_4AhL7n2UKSiiQCNayKcZEBqulUyNzIWmO5PsY6IIEl7WPZ66DFkAY0SnyZA2wmFPitzZXxzRFoAIClSyPxCwiXL5Z2IrKhE1i-ht-IX2Z8jN4LYO9QrZ1HJBgkCItlDlTQM-reUcW5JBfLtHd3cDdOQNHGW8-P1sJAOBDafF7pw5A23d2mdozRhwSxASMqy--SZM8zxWo8dlLcWX49M2_-OujpQH8KdZXlQwAB0" 
+                  alt="SIAKAD Mini Sekolah Dashboard" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Web</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    SIAKAD Mini Sekolah
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Platform sistem informasi akademik terintegrasi untuk absensi QR harian, rekap nilai e-rapor, dan kalender kegiatan sekolah.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">AP</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Aldi Pratama</p>
+                      <p class="text-[#6b7280]">XII RPL 1</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2025</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Kasir UMKM -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="aplikasi" onclick="openDetailModal('kasir')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXEaap_MBF1XIusTd7wFX_lyjjP8S3TV5J3mx0Q8Ebr_ftsVZdbHXnQtp1McfS5n5eNmpeAT5Q5R1a5YS_oV0grnLHgkIwu8rfaAZkUPSLNfUCzgOJ46ZZ_Lcr4wd3lK59HIl7IzvMqqBTVt1YNMYEshe_cmVqN-NQlCatWKZtM24TmyUwTZmOkzWaSvHbqV1I5qA4WUCsvyX82geatzamBAlYSpRgEHv1oyavuac" 
+                  alt="Aplikasi Kasir UMKM" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Aplikasi</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    Aplikasi Kasir UMKM
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Aplikasi point-of-sale offline-first dengan sinkronisasi cloud otomatis, mendukung pencetakan nota bluetooth dan pencatatan laba harian.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">NP</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Nabila Putri</p>
+                      <p class="text-[#6b7280]">XI RPL 2</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2025</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Monitoring Jaringan -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="jaringan" onclick="openDetailModal('jaringan')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy6uMY3MIWd-2WJsqZXnm00yLvxgfDcFtzlNcEs_6MsgQxuj0pDXFYLcWdY1kFDFxM0j9B_NaPKRzfEElPK8Lkul-ly0PUlVeFLuoOyCbix6NCBT7khYfDweqD2CvBb6OMa4FEE8UVIUd5wp09LNZUa1G_F7hFx_Axg12iAsPoLJrJaXMNb4vK_m2U1r28jz3974rCrsEUynKHcfTPcqvV6997GWzZdsk0MzrH2S4" 
+                  alt="Monitoring Jaringan Lab" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Jaringan</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    Monitoring Jaringan Lab
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Sistem pendeteksi utilisasi bandwidth router Mikrotik dan alert otomatis via Telegram ketika terjadi lonjakan atau downtime workstation.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">FR</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Fajar Ramadhan</p>
+                      <p class="text-[#6b7280]">XII RPL 2</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2024</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: Katalog Batik -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="web" onclick="openDetailModal('batik')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0-g0b1vI82aDbzAi3_LKJo1r9YofdZYhLXMejJ1KhWMo-pLaIZql8RaOmZmr_2fzTDeey6VtMGT_tz9FOqaaM1Hl2BiSFvGsC7VdIfCle0NBCg2--njVHRJAwWUoeLuIFM9olvPVg85JVkQiQ31kDQL2PZTXvfqvJaYGrEr4xAIx5sKkDL7ekGCWAiTz_bOcZih5_Dcw65N0pznAtLYVsdyxeQKSvZJSoHXPZqqw" 
+                  alt="Katalog Batik Online" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Web</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    Katalog Batik Online
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Toko online modern dengan visualisasi motif kain resolusi tinggi dan integrasi payment gateway sandbox Midtrans untuk UMKM binaan.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">SM</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Salsa Maharani</p>
+                      <p class="text-[#6b7280]">XI RPL 1</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2025</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5: Absensi QR Code -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="aplikasi" onclick="openDetailModal('absensi')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxPmX6NNQaWx5eDktVNV4km88OBBEQNYgcngKBxcewaNLDMGFQTyD7gLPXyuuuO34KN9zVlNh5-4xoqMdAJcE18ulzUoqKvp8xLpvMiJr_2_sMeYNyTRrcb8oopCHMS9pylDjqf08aqVibC5K9Bo_-s7Tc0EaOohscxtQrLGOSeZNRs2x8avN9Iz7VPejIZUl7J3mfCna_AgnJ8QrDyS5kxXRWHsRnM6HMaB-UKDY" 
+                  alt="Aplikasi Absensi QR Code" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Aplikasi</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    Aplikasi Absensi QR Code
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Aplikasi presensi mandiri siswa berbasis QR dinamis yang berganti tiap 30 detik untuk mencegah titip absen dan keterlambatan.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">DS</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Dimas Saputra</p>
+                      <p class="text-[#6b7280]">XII RPL 1</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2024</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6: Portal Pengaduan -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="web" onclick="openDetailModal('pengaduan')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg_ogzfW7CUFCM8ZK6cnd1J9iTo4S59vNgdVUQRasan4S3O4Df-1ipz2SWuegm5Wie-HXHBXLruw7DihS3nfWg5tnnTaEzCkPRuewQHNPDLdkpL6_pm168fkNUKMMKaQyJ2qzFTMq4K3ivPj3P5uBMeasj_Xy8mKw6Beb2tu7uKyolyPpgR-J05v-ZhaApjEzfJFTf_JBlUVKa6oUlLV-pKbDKPn4X5MwDr6NolOk" 
+                  alt="Portal Pengaduan Siswa" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Web</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    Portal Pengaduan Siswa
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Platform suara siswa anonim untuk pelaporan sarana rusak dan konseling dengan enkripsi identitas ujung-ke-ujung (end-to-end).
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">RA</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Rizka Amelia</p>
+                      <p class="text-[#6b7280]">XII RPL 2</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2025</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 7: Smart Trash IoT -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="jaringan" onclick="openDetailModal('smart-trash')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwI0s8jOx34_dwMbeQTPx-iU1eiIqqgCbpS0joeQ-Zbugj1ZiDszmRpsTSADMJJ2Ka8oolyoVqbeWnFGm2vJwI8U3iIbLENctqjSpbQd8s7NCsg-vcUQCD97L3V5pRSLpPf3XBy_UIopl8edmluxU-GDxPlv9C9z55XJ9ZCKmshMFnQXYEzZz4GRyVK6obwJTAvO3dvPbENdUoYAFR4qanB6SHju4HYCZi0NhF75I" 
+                  alt="Smart Trash IoT Dashboard" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Jaringan</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    Smart Trash IoT Dashboard
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Tempat sampah cerdas dengan sensor ultrasonik HC-SR04 dan ESP32 yang mengirimkan status kapasitas via protokol MQTT realtime.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">KS</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Kevin Sanjaya</p>
+                      <p class="text-[#6b7280]">XI RPL 1</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2025</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 8: E-Library Mobile -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="aplikasi" onclick="openDetailModal('elibrary')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP5m2aJWCbGJ5xh8k8Moq6DgHoJeMTgK_UU-8hIezW1tFmnxPGrRWOSw2tUL8_4EG5GuqFN1_5nb_1o6mjh3CLNfjgy-4D4k8vbBo1v3fzWj06Z_P05pH0v0AfG49vCbVN8iHqLuk9D6zsDXRB18IyaO7nvFLAxzKN1XSgAGsgI2x4jVPZPO4r9tle_DeMAuKOC0ELQi5K53b282CCwUU2TEV2wJ4FRenroAOqpM8" 
+                  alt="E-Library Mobile App" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Aplikasi</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    E-Library Mobile App
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Aplikasi perpustakaan saku dengan fitur e-reader PDF terproteksi DRM, perpanjangan buku otomatis, dan kartu digital barcode.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">AZ</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Amanda Zahra</p>
+                      <p class="text-[#6b7280]">XII RPL 1</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2024</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 9: Profil Desa Wisata -->
+            <article class="project-card bg-white border border-[#E5E7EB] rounded overflow-hidden transition-all duration-200 hover:shadow-lg group cursor-pointer flex flex-col" data-category="web" onclick="openDetailModal('desa-wisata')">
+              <div class="relative h-[210px] bg-[#EFF4FF] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx23V9dxDdF1E3CgZHVSyxUMXzr-4ctSYqTRYfChESFm94ZkeaiYRDhVd_5aSl0WD8gCe9lxGLFFTYJNXeGsDtDOUZrzoamugbe2JsnSmWJ0z8jAMC3Ih2GLXsVP_NxHccm8dPlTKtbwpBAtLqBt0He839CtaulB-rqYJ061iUVFrlwtDffayXLEgIeUF-IBlju-yvyELCyyUzn7ZS1LboGYALTvQhHHxtC4mnX9c" 
+                  alt="Website Profil Desa Wisata" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="bg-[#F5B400] text-[#0B3A66] text-xs uppercase font-bold px-2.5 py-1 rounded shadow-sm">Web</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0B3A66]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-[#0B3A66] text-white px-3.5 py-1.5 rounded text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span> Lihat Detail
+                  </span>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-['Space_Grotesk'] text-lg font-bold text-[#0B3A66] group-hover:text-[#F5B400] transition-colors leading-snug">
+                    Website Profil Desa Wisata
+                  </h3>
+                  <p class="text-sm text-[#4b5563] line-clamp-2 mt-2 leading-relaxed">
+                    Portal promosi desa wisata dengan peta interaktif, pemesanan homestay, dan kalender festival budaya berbasis CMS headless.
+                  </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-[#E5E7EB] flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-[#eff4ff] text-[#0B3A66] font-bold flex items-center justify-center border border-[#0B3A66]/20">BW</div>
+                    <div>
+                      <p class="font-bold text-[#121c2a] leading-tight">Bagas Wicaksono</p>
+                      <p class="text-[#6b7280]">XI RPL 2</p>
+                    </div>
+                  </div>
+                  <span class="font-bold text-[#0B3A66] bg-[#f1f4fb] px-2 py-0.5 rounded">2025</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Project Detail Modal Dialog -->
+          <div id="project-modal" class="w-full max-w-[720px] mx-auto mt-12 bg-white rounded border border-[#E5E7EB] border-t-4 border-t-[#0B3A66] shadow-xl overflow-hidden hidden">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between px-6 py-4 bg-[#f8f9ff] border-b border-[#E5E7EB]">
+              <div class="flex items-center gap-2.5">
+                <span class="inline-block w-2.5 h-2.5 bg-[#F5B400] rounded-sm"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#0B3A66]">
+                  Pratinjau Spesifikasi Proyek Siswa
+                </span>
+              </div>
+              <button 
+                type="button" 
+                class="w-9 h-9 flex items-center justify-center text-[#4b5563] hover:text-[#0B3A66] hover:bg-white rounded transition-colors" 
+                onclick="dismissPreview()" 
+                aria-label="Tutup Pratinjau"
+              >
+                <span class="material-symbols-outlined text-[22px]">close</span>
+              </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 md:p-8 space-y-6">
+              <!-- Header Info -->
+              <div>
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 id="modal-title" class="font-['Space_Grotesk'] text-2xl font-bold text-[#0B3A66]">
+                    SIAKAD Mini Sekolah
+                  </h3>
+                  <div class="flex items-center gap-2">
+                    <span id="modal-badge" class="bg-[#F5B400] text-[#0B3A66] text-xs font-bold px-2.5 py-0.5 rounded">
+                      Web Application
+                    </span>
+                    <span id="modal-year" class="text-xs font-semibold text-[#0B3A66] bg-[#eff4ff] px-2.5 py-0.5 rounded">
+                      Tahun Ajaran 2024/2025
+                    </span>
+                  </div>
+                </div>
+                <p id="modal-desc" class="text-sm text-[#4b5563] mt-3 leading-relaxed">
+                  Sistem informasi akademik berbasis web untuk mengelola absensi, rekap nilai rapor, dan agenda sekolah secara realtime.
+                </p>
+              </div>
+
+              <!-- Tech Stack Container -->
+              <div>
+                <span class="block text-xs font-bold text-[#121c2a] uppercase tracking-wider mb-2">
+                  Teknologi &amp; Framework yang Digunakan:
+                </span>
+                <div id="modal-tech" class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-[#f8f9ff] border border-[#E5E7EB] text-xs font-mono text-[#0B3A66] rounded">Laravel 11</span>
+                  <span class="px-3 py-1 bg-[#f8f9ff] border border-[#E5E7EB] text-xs font-mono text-[#0B3A66] rounded">MySQL 8.0</span>
+                  <span class="px-3 py-1 bg-[#f8f9ff] border border-[#E5E7EB] text-xs font-mono text-[#0B3A66] rounded">Tailwind CSS</span>
+                </div>
+              </div>
+
+              <!-- Author & Mentor Box -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-[#eff4ff] rounded border border-[#0B3A66]/10">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[22px] text-[#0B3A66] mt-0.5">badge</span>
+                  <div>
+                    <span class="text-[11px] text-[#6b7280] uppercase font-semibold block">Pengembang Utama</span>
+                    <p id="modal-author" class="text-sm font-bold text-[#121c2a]">Aldi Pratama</p>
+                    <p id="modal-class" class="text-xs text-[#4b5563]">Kelas XII RPL 1</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[22px] text-[#0B3A66] mt-0.5">school</span>
+                  <div>
+                    <span class="text-[11px] text-[#6b7280] uppercase font-semibold block">Guru Pembimbing</span>
+                    <p id="modal-mentor" class="text-sm font-bold text-[#121c2a]">Budi Santoso, S.Kom., M.T.</p>
+                    <p class="text-xs text-[#4b5563]">Instruktur RPL</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
+                <button 
+                  type="button" 
+                  class="h-10 px-5 border border-[#0B3A66] text-[#0B3A66] hover:bg-[#0B3A66] hover:text-white text-xs font-semibold rounded transition-colors" 
+                  onclick="dismissPreview()"
+                >
+                  Tutup Pratinjau
+                </button>
+                <a 
+                  href="kontak.html" 
+                  class="h-10 px-6 bg-[#F5B400] hover:bg-[#D99E00] text-[#0B3A66] text-xs font-bold rounded inline-flex items-center gap-1.5 transition-colors shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[16px]">handshake</span>
+                  <span>Ajukan Kerjasama Proyek</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Industrial Collaboration Endorsement Banner -->
+          <div class="mt-14 sm:mt-16 bg-white border border-[#E5E7EB] p-6 sm:p-8 rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-[#EFF4FF] text-[#0B3A66] rounded flex items-center justify-center shrink-0 border border-[#0B3A66]/10">
+                <span class="material-symbols-outlined text-[28px]">workspace_premium</span>
+              </div>
+              <div>
+                <h4 class="font-['Space_Grotesk'] text-base sm:text-lg font-bold text-[#0B3A66]">
+                  Kemitraan Industri &amp; Magang Industri (PKL)
+                </h4>
+                <p class="text-xs sm:text-sm text-[#4b5563] mt-0.5 leading-relaxed">
+                  Seluruh proyek siswa dinilai dan diaudit langsung oleh praktisi software house dan industri IT mitra SMKN 2 BANDAR LAMPUNG.
+                </p>
+              </div>
+            </div>
+            <a 
+              href="kontak.html" 
+              class="shrink-0 inline-flex items-center gap-2 h-11 px-6 bg-[#0B3A66] text-white hover:bg-[#08325A] text-xs sm:text-sm font-semibold rounded transition-colors"
+            >
+              <span>Ajukan Kerjasama Project</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- FLOATING WHATSAPP BUTTON                                          -->
+  <!-- ================================================================= -->
+  <div class="floating-whatsapp">
+    <div class="whatsapp-tooltip">Hubungi Kami via WhatsApp</div>
+    <a 
+      href="https://wa.me/6289507972498" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="floating-whatsapp-btn" 
+      aria-label="Bantuan WhatsApp RPL"
+    >
+      <span class="material-symbols-outlined text-[28px]">support_agent</span>
+    </a>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- FOOTER                                                            -->
+  <!-- ================================================================= -->
+  <footer class="w-full bg-[#0B3A66] text-white pt-14 pb-8 border-t border-[#08325A]">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 pb-12">
+        <!-- School Info -->
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">
+            SMKN 2 BANDAR LAMPUNG
+          </h3>
+          <p class="text-sm font-semibold text-white/90">Jurusan Rekayasa Perangkat Lunak</p>
+          <div class="space-y-2.5 text-white/80 text-sm pt-2">
+            <p class="flex items-start gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">location_on</span>
+              <span>Jl Prof. Dr. Ir. Sumantri Brojonegoro 1 35141 Labuhan Ratu Lampung</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">mail</span>
+              <span>rpl@smkn2bdl.sch.id</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-[18px] shrink-0 text-[#F5B400]">call</span>
+              <span>+62 895-0797-2498</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">
+            Navigasi Cepat
+          </h3>
+          <ul class="space-y-2 text-sm">
+            <li data-path="beranda"><a href="index.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Beranda</a></li>
+            <li data-path="keunggulan"><a href="index.html#mengapa-rpl" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Keunggulan</a></li>
+            <li data-path="tenaga-pendidik"><a href="tenaga-pendidik.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Tenaga Pendidik</a></li>
+            <li data-path="fasilitas-kurikulum"><a href="fasilitas-kurikulum.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Fasilitas &amp; Kurikulum</a></li>
+            <li data-path="karya-siswa"><a href="karya-siswa.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Karya Siswa</a></li>
+            <li data-path="kontak"><a href="kontak.html" class="text-white/80 hover:text-[#F5B400] hover:underline transition-colors">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media & Office Hours -->
+        <div class="space-y-4">
+          <h3 class="font-['Space_Grotesk'] text-sm text-[#F5B400] uppercase tracking-wider font-bold">
+            Media Sosial &amp; Jam Layanan
+          </h3>
+          <div class="flex items-center gap-3 text-white/90">
+            <a href="#" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="Instagram" title="Instagram">
+              <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+            </a>
+            <a href="https://smkn2bdl.sch.id/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="Website Resmi SMKN 2" title="Website SMKN 2">
+              <span class="material-symbols-outlined text-[20px]">public</span>
+            </a>
+            <a href="#" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="TikTok" title="TikTok">
+              <span class="material-symbols-outlined text-[20px]">music_note</span>
+            </a>
+            <a href="#" class="w-9 h-9 rounded bg-[#08325A] flex items-center justify-center hover:bg-[#F5B400] hover:text-[#0B3A66] transition-colors" aria-label="YouTube" title="YouTube">
+              <span class="material-symbols-outlined text-[20px]">smart_display</span>
+            </a>
+          </div>
+          <div class="pt-2 space-y-1 text-sm text-white/80">
+            <p class="font-semibold text-white/95">Jam Operasional &amp; Konsultasi:</p>
+            <p>Senin – Jumat: 07.00 – 16.00 WIB</p>
+            <p class="text-white/60">Sabtu, Minggu &amp; Libur Nasional: Tutup</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="border-t border-white/10 pt-6 text-center text-xs text-white/70">
+        <p>© 2026 SMKN 2 BANDAR LAMPUNG — Jurusan Rekayasa Perangkat Lunak. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
